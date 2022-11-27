@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "cwchar": "cpp",
+        "tlstring.h": "c"
+    }
+}
