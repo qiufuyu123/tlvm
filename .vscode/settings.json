@@ -1,6 +1,8 @@
 {
     "files.associations": {
         "cwchar": "cpp",
-        "tlstring.h": "c"
+        "tlstring.h": "c",
+        "config.h": "c",
+        "tlerror.h": "c"
     }
 }

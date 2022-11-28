@@ -1,10 +1,8 @@
-OBJS= main.o
+OBJS= main.c vmtype/TLError.c vmtype/TLString.c
 
 all: $(OBJS)
 	#cd ../build && gcc $(OBJS) -o tlvm.out
-	cd ../build && ar rcs libtlvm.a $(OBJS)
-%.o:%.c
-	gcc -I ../include $< -c -o ../build/$@
+	gcc -I ../include $(OBJS) -lc -shared -o ../libtlvm.so -fPIC 
 
 
 clean:
