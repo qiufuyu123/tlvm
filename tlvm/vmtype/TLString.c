@@ -36,5 +36,6 @@ bool TL_StringCompareConstant(TLString_t* str,const TLChar* str2)
 }
 void TL_StringCopyConstant(TLString_t *target, const TLChar*str)
 {
-    memcpy(target->strs,str,target->len>wcslen(str)?wcslen(str)*2:target->len*2);
+
+    wcsncpy(target->strs,str,wcslen(str)>target->len?target->len:wcslen(str));
 }

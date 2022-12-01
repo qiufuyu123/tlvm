@@ -3,6 +3,8 @@
         "cwchar": "cpp",
         "tlstring.h": "c",
         "config.h": "c",
-        "tlerror.h": "c"
+        "tlerror.h": "c",
+        "stdio.h": "c",
+        "tlarray.h": "c"
     }
 }

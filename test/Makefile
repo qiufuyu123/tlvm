@@ -4,4 +4,5 @@ all: $(SRC)
 	gcc  $(SRC) -I ../include -o ../tlvmtest -L../ -ltlvm -Wl,-rpath=./
 	
 clean:
-	-rm -rf test
+	-rm -rf test.o
+	-rm -rf ../tlvmtest
