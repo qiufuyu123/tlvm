@@ -1,10 +1,8 @@
 #pragma once
-#include"vmtype/Token.h"
+#include"vmtype/TLToken.h"
 
-typedef struct TL_LexerStream
+typedef struct
 {
-    char *code;
-    uint32_t code_len;
-    uint32_t index;
-
-};
+    TL_Array_t* token_module_list;
+    TL_String_t* current_code_page;
+}TL_lexer_t;

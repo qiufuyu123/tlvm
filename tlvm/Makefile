@@ -1,4 +1,4 @@
-OBJS= main.c vmtype/TLError.c vmtype/TLString.c
+OBJS= main.c vmtype/TLError.c vmtype/TLString.c vmtype/TLArray.c
 
 all: $(OBJS)
 	#cd ../build && gcc $(OBJS) -o tlvm.out

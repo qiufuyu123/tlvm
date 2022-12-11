@@ -15,14 +15,14 @@ typedef struct
 {
     TLChar *strs;
     TLStringLength len;
-}TLString_t;
+}TL_String_t;
 
-TLString_t* TL_StringAlloc(TLStringLength len);
+TL_String_t* TL_StringAlloc(TLStringLength len);
 
-void TL_StringFree(TLString_t* str);
+void TL_StringFree(TL_String_t* str);
 
-bool TL_StringCompare(TLString_t* str,TLString_t* str2);
+bool TL_StringCompare(TL_String_t* str,TL_String_t* str2);
 
-bool TL_StringCompareConstant(TLString_t* str,const TLChar* str2);
+bool TL_StringCompareConstant(TL_String_t* str,const TLChar* str2);
 
-void TL_StringCopyConstant(TLString_t *target, const TLChar*str);
+void TL_StringCopyConstant(TL_String_t *target, const TLChar*str);
