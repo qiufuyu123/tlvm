@@ -8,11 +8,16 @@ TL_String_t* TL_StringAlloc(TLStringLength len)
     TL_RESOUCE_NEW(TL_String_t,re);
     TL_ASSERT(re,TL_ERROR_MEMORY_EXHAUST);
     re->len=len;
-    re->strs=TL_MEM_ALLOC(len*sizeof(TLChar));
+    re->strs=TL_MEM_ALLOC(len*sizeof(TLChar)+1);
     TL_ASSERT_WITH_EXPR(re->strs,TL_MEM_FREE(re),TL_ERROR_MEMORY_EXHAUST)
     return re;
 }
-
+TL_String_t* TL_StringAllocConst(TLChar*str)
+{
+    TL_String_t*r=TL_StringAlloc(wcslen(str));
+    TL_StringCopyConstant(r,str);
+    return r;
+}
 void TL_StringFree(TL_String_t* str)
 {
     _STRING_ASSERT(str);

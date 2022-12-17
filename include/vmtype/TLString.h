@@ -18,7 +18,8 @@ typedef struct
 }TL_String_t;
 
 TL_String_t* TL_StringAlloc(TLStringLength len);
-
+TL_String_t* TL_StringAllocConst(TLChar*  str);
+#define TL_C2S(str) TL_StringAllocConst(str)
 void TL_StringFree(TL_String_t* str);
 
 bool TL_StringCompare(TL_String_t* str,TL_String_t* str2);

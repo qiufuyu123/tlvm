@@ -3,13 +3,15 @@
 #include<stdlib.h>
 #include"vmtype/TLError.h"
 #define TL_ASSERT_TOKEN(token)TL_ASSERT(token,TL_ERROR_NULL_PTR);TL_ASSERT(token->val,TL_ERROR_NULL_PTR);
-TL_Token_t* TL_TokenAlloc(char root_type,TL_TokenType type,TL_String_t* val)
+TL_Token_t* TL_TokenAlloc(char root_type,TL_TokenType type,TL_String_t* val,int row,int col)
 {
     TL_ASSERT(val,TL_ERROR_NULL_PTR);
     TL_RESOUCE_NEW(TL_Token_t,re);
     TL_ASSERT(re,TL_ERROR_MEMORY_EXHAUST);
     re->type=type;
     re->val=val;
+    re->row=row;
+    re->col=col;
     re->root_type=root_type;
     return re;
 }

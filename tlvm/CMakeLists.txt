@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.20)
+project(tlvm)
+set(SRC_LIST vmtype/TLArray.c vmtype/TLError.c vmtype/TLString.c vmtype/TLToken.c vmtype/TLFuncList.c lexer/Lexer.c)
+include_directories(../include)
+add_library(tlvm SHARED ${SRC_LIST})

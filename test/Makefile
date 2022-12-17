@@ -1,8 +1,0 @@
-SRC=main.c
-all: $(SRC)
-	#cd ../build && gcc $(OBJS) -o tlvm.out
-	gcc  $(SRC) -I ../include -o ../tlvmtest -L../ -ltlvm -Wl,-rpath=./ -g
-	
-clean:
-	-rm -rf test.o
-	-rm -rf ../tlvmtest

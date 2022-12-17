@@ -88,7 +88,7 @@ typedef struct
     
 }TL_TokenTypeMapper;
 
-TL_Token_t* TL_TokenAlloc(char root_type, TL_TokenType type,TL_String_t* val);
+TL_Token_t* TL_TokenAlloc(char root_type, TL_TokenType type,TL_String_t* val,int row,int col);
 
 TL_LInteger TL_TokenToInteger(TL_Token_t* t,int base,TLChar *lasts);
 
